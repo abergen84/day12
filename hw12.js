@@ -5,14 +5,18 @@
 // 4. find the longest string of the inputs
 // 5. given an array of Date() objects (Oct 4th 2014, Oct 3rd 2014, Sept 30th 2014, Sept 1st 2012, March 13th 2010), in that order, sort them chronologically. Use http://devdocs.io/javascript/global_objects/date for reference on creating Date() objects with a specific date.
 
+
+
+
+
 //Problem 1
 
 //Basic
-function sum(a, b) {
-    "use strict";
-
-    return a + b;
-}
+//function sum(a, b) {
+//    "use strict";
+//
+//   return a + b;
+//}
 
 //For loop
 function sumForLoop() {
@@ -28,38 +32,43 @@ function sumForLoop() {
 }
 
 //ForEach 
-function sumForEach() {
-    "use strict";
+// function sumForEach() {
+//     "use strict";
 
-    var args = Array.prototype.slice.apply(arguments, []),
-        sum = 0;
+//     var args = Array.prototype.slice.apply(arguments, []),
+//         sum = 0;
 
-    args.forEach(function(num) {
-        sum += num;
-    });
-    return sum;
+//     args.forEach(function(num) {
+//         sum += num;
+//     });
+//     return sum;
 
-}
+// }
 
 //Custom ForEach
-function forEach(array, callback) {
-    "use strict";
-    for (var i = 0; i < array.length; i++) {
-        callback(array[i], i);
-    }
-}
+// function forEach(array, callback) {
+//     "use strict";
+//     for (var i = 0; i < array.length; i++) {
+//         callback(array[i], i);
+//     }
+// }
 
-function sumForEachCustom() {
-    "use strict";
+// function sumForEachCustom() {
+//     "use strict";
 
-    var args = Array.prototype.slice.apply(arguments, []),
-        sum = 0;
+//     var args = Array.prototype.slice.apply(arguments, []),
+//         sum = 0;
 
-    forEach(args, function() {
-        sum += arguments[0];
-    })
-    return sum;
-}
+//     forEach(args, function() {
+//         sum += arguments[0];
+//     })
+//     return sum;
+// }
+
+
+
+
+
 
 // Problem 2
 
@@ -77,30 +86,35 @@ function averageForLoop() {
 }
 
 //ForEach loop
-function averageForEach() {
-    "use strict";
+// function averageForEach() {
+//     "use strict";
 
-    var args = Array.prototype.slice.apply(arguments, []),
-        sum = 0;
+//     var args = Array.prototype.slice.apply(arguments, []),
+//         sum = 0;
 
-    args.forEach(function(num) {
-        sum += num;
-    });
-    return (sum / args.length);
-}
+//     args.forEach(function(num) {
+//         sum += num;
+//     });
+//     return (sum / args.length);
+// }
 
-//Custom ForEach
-function averageForEachCustom() {
-    "use strict";
+// //Custom ForEach
+// function averageForEachCustom() {
+//     "use strict";
 
-    var args = Array.prototype.slice.apply(arguments, []),
-        sum = 0;
+//     var args = Array.prototype.slice.apply(arguments, []),
+//         sum = 0;
 
-    forEach(args, function() {
-        sum += arguments[0];
-    });
-    return (sum / args.length);
-}
+//     forEach(args, function() {
+//         sum += arguments[0];
+//     });
+//     return (sum / args.length);
+// }
+
+
+
+
+
 
 //Problem 3
 
@@ -113,13 +127,13 @@ function largestForLoop() {
 
     for (var i = 0; i < args.length; i++) {
         // if args[i] is more than largestNumber
-	        // set largestNumber to args[i]        
-        if(args[i] > largestNumber){
-        	
-        	largestNumber = args[i];
-        } 
+        // set largestNumber to args[i]        
+        if (args[i] > largestNumber) {
+
+            largestNumber = args[i];
+        }
     }
-	return largestNumber;
+    return largestNumber;
 }
 
 
@@ -127,17 +141,43 @@ function largestForLoop() {
 //Problem 4
 //
 
-//for Loop
+//for Loop spits out number of longest string
 function longestForLoop() {
     "use strict";
 
-    var args = Array.prototype.slice.apply(arguments, []);
+    var args = Array.prototype.slice.apply(arguments, []),
+        largestString = 0;
 
     for (var i = 0; i < args.length; i++) {
-        return args.length;
+        if (args[i].length > largestString) {
+            
+            largestString = args[i].length
+        }
     }
-    return args.length[0];
+    return largestString;
 }
+
+
+
+//for loop spits out the actual longest word
+function longestForLoopWord() {
+    "use strict";
+
+    var args = Array.prototype.slice.apply(arguments, []),
+        largestString = "";
+
+    for (var i = 0; i < args.length; i++) {
+        if (args[i].length > largestString.length) {
+            
+            largestString = args[i]
+        }
+    }
+    return largestString;
+}
+
+
+
+
 
 
 //Problem 5
