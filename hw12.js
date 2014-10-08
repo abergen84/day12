@@ -80,3 +80,46 @@ function averageForEach(){
 	args.forEach(function(num){ sum += num; });
 	return (sum/args.length);
 }
+
+//Custom ForEach
+//
+//
+
+//Problem 3
+
+// For Loop
+// 
+function largestForLoop(){
+	"use strict";
+
+	var args = Array.prototype.slice.apply(arguments, []),
+	sum = 0;
+
+	for(var i = 0; i < args.length; i++){
+//trying to figure out what it would do here		
+	}
+//	return 
+}
+
+
+
+//Problem 4
+//
+
+//for Loop
+function longestForLoop(){
+	"use strict";
+
+	var args = Array.prototype.slice.apply(arguments, []);
+
+	for(var i = 0; i < args.length; i++){
+		return args.length;
+	}
+		return args.length[0];
+}
+
+
+
+
+
+
