@@ -63,5 +63,20 @@ function averageForLoop(){
 	var args = Array.prototype.slice.apply(arguments, []),
 	sum = 0;
 
-	
+	for(var i = 0; i < args.length; i++){
+		sum += args[i];
+	}
+	return (sum/args.length);
+}
+
+//ForEach loop
+
+function averageForEach(){
+	"use strict";
+
+	var args = Array.prototype.slice.apply(arguments, []),
+	sum = 0;
+
+	args.forEach(function(num){ sum += num; });
+	return (sum/args.length);
 }
