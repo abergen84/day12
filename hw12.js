@@ -19,6 +19,7 @@
 //}
 
 //For loop
+
 function sumForLoop() {
     "use strict";
 
@@ -32,6 +33,7 @@ function sumForLoop() {
 }
 
 //ForEach Loop
+
 function sumForEach() {
     "use strict";
 
@@ -46,24 +48,25 @@ function sumForEach() {
 }
 
 //Custom ForEach
-// function forEach(array, callback) {
-//     "use strict";
-//     for (var i = 0; i < array.length; i++) {
-//         callback(array[i], i);
-//     }
-// }
 
-// function sumForEachCustom() {
-//     "use strict";
+function forEach(array, callback) {
+    "use strict";
+    for (var i = 0; i < array.length; i++) {
+        callback(array[i], i);
+    }
+}
 
-//     var args = Array.prototype.slice.apply(arguments, []),
-//         sum = 0;
+function sumForEachCustom() {
+    "use strict";
 
-//     forEach(args, function() {
-//         sum += arguments[0];
-//     })
-//     return sum;
-// }
+    var args = Array.prototype.slice.apply(arguments, []),
+        sum = 0;
+
+    forEach(args, function() {
+        sum += arguments[0];
+    })
+    return sum;
+}
 
 
 
@@ -98,18 +101,18 @@ function averageForEach() {
     return (sum / args.length);
 }
 
-// //Custom ForEach
-// function averageForEachCustom() {
-//     "use strict";
+//Custom ForEach
+function averageForEachCustom() {
+    "use strict";
 
-//     var args = Array.prototype.slice.apply(arguments, []),
-//         sum = 0;
+    var args = Array.prototype.slice.apply(arguments, []),
+        sum = 0;
 
-//     forEach(args, function() {
-//         sum += arguments[0];
-//     });
-//     return (sum / args.length);
-// }
+    forEach(args, function() {
+        sum += arguments[0];
+    });
+    return (sum / args.length);
+}
 
 
 
@@ -221,36 +224,7 @@ function forEach(array, callback){
     }
 }
 
-// //The Date Sorting Function
-// //
-// function sortDateForLoop(dates){
-// 	var newArray = [],
-// 		earliestDate = dates[0];
+//The Date Sorting Function
 
-// 	for(var i = 0; i < dates.length; i++){
-// 		//find the lowest date and put it at the front of newArray
-// 		for(var j = 0; j < dates.length; j++){
 
-// 			if(+dates[j] < +earliestDate){
-// 				earliestDate = dates[j]
-// 			}
 
-// //			earliestDate = dates[j].getTime() < earliestDate.getTime() ? dates[j] : 
-// //				earliestDate;
-// 		}
-// 	}
-// }
-
-// function sortDateForEach(){}
-
-// function sortDateCustomForEach(){}
-
-// var dates = [
-// 	new Date(2014, 9, 4)
-// 	new Date(2014, 9, 3)
-// 	new Date(2014, 8, 30)
-// 	new Date(2012, 9, 1)
-// 	new Date(2010, 2, 13)
-// 	];
-
-// console.log(dates);
