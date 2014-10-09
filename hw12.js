@@ -32,18 +32,18 @@ function sumForLoop() {
 }
 
 //ForEach 
-// function sumForEach() {
-//     "use strict";
+function sumForEach() {
+    "use strict";
 
-//     var args = Array.prototype.slice.apply(arguments, []),
-//         sum = 0;
+    var args = Array.prototype.slice.apply(arguments, []),
+        sum = 0;
 
-//     args.forEach(function(num) {
-//         sum += num;
-//     });
-//     return sum;
+    args.forEach(function(num) {
+        sum += num;
+    });
+    return sum;
 
-// }
+}
 
 //Custom ForEach
 // function forEach(array, callback) {
@@ -86,17 +86,17 @@ function averageForLoop() {
 }
 
 //ForEach loop
-// function averageForEach() {
-//     "use strict";
+function averageForEach() {
+    "use strict";
 
-//     var args = Array.prototype.slice.apply(arguments, []),
-//         sum = 0;
+    var args = Array.prototype.slice.apply(arguments, []),
+        sum = 0;
 
-//     args.forEach(function(num) {
-//         sum += num;
-//     });
-//     return (sum / args.length);
-// }
+    args.forEach(function(num) {
+        sum += num;
+    });
+    return (sum / args.length);
+}
 
 // //Custom ForEach
 // function averageForEachCustom() {
@@ -136,6 +136,22 @@ function largestForLoop() {
     return largestNumber;
 }
 
+//ForEach Loop
+function largestForEachLoop(){
+	"use strict";
+
+	var args = Array.prototype.slice.apply(arguments, []),
+	largestNumber = 0;
+
+	args.forEach(function(num){
+		if(args[num] > largestNumber){
+
+			largestNumber = args[num];
+		}
+	});
+	return largestNumber;
+}
+
 
 
 //Problem 4
@@ -150,7 +166,7 @@ function longestForLoop() {
 
     for (var i = 0; i < args.length; i++) {
         if (args[i].length > largestString) {
-            
+
             largestString = args[i].length
         }
     }
@@ -168,14 +184,24 @@ function longestForLoopWord() {
 
     for (var i = 0; i < args.length; i++) {
         if (args[i].length > largestString.length) {
-            
+
             largestString = args[i]
         }
     }
     return largestString;
 }
 
+//Longest ForEachLoop
+function longestForEachLoop(){
+	"use strict";
 
+	var args = Array.prototype.slice.apply(arguments, []),
+	largestString = 0;
+
+	args.forEach(function(num){
+		
+	})
+}
 
 
 
