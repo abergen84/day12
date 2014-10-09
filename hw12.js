@@ -281,6 +281,18 @@ console.log(customers);
 
                 return c.firstname.charAt(0) === "J";
                     
-                });
+                })
+
+    		.map(function(c)	{
+
+    			return { name: c.firstname + " " + c.lastname};
+    		})
+
+    		.sort(sortByName);
+
+    	function sortByName(c1, c2){
+    		"use strict";
+    		return c1 > c2 ? 1 : -1;
+    	};
            
 console.log(projections);
