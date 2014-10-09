@@ -263,13 +263,19 @@ var customers = [{
     lastname: 'Blogs'
 }, {
     firstname: 'John',
-    lastname: 'Smith'
+    lastname: 'Zmith'
 }, {
     firstname: 'Dave',
     lastname: 'Jones'
 }, {
     firstname: 'Jack',
     lastname: 'White'
+}, {
+	firstname: 'Joel',
+	lastname: 'Crisp'
+}, {
+	firstname: 'Kip',
+	lastname: 'Slick'
 }];
 
 console.log(customers);
@@ -288,11 +294,11 @@ console.log(customers);
     			return { name: c.firstname + " " + c.lastname};
     		})
 
-    		.sort(sortByName);
+    		.sort(sortByName)
 
     	function sortByName(c1, c2){
     		"use strict";
-    		return c1 > c2 ? 1 : -1;
+    		return c1.lastname > c2.lastname ? 1 : -1;
     	};
            
 console.log(projections);
