@@ -31,7 +31,7 @@ function sumForLoop() {
     return sum;
 }
 
-//ForEach 
+//ForEach Loop
 function sumForEach() {
     "use strict";
 
@@ -144,9 +144,9 @@ function largestForEachLoop(){
 	largestNumber = 0;
 
 	args.forEach(function(num){
-		if(args[num] > largestNumber){
+		if(num > largestNumber){
 
-			largestNumber = args[num];
+			largestNumber = num;
 		}
 	});
 	return largestNumber;
@@ -157,7 +157,7 @@ function largestForEachLoop(){
 //Problem 4
 //
 
-//for Loop spits out number of longest string
+//for Loop (spits out number of longest string)
 function longestForLoop() {
     "use strict";
 
@@ -175,7 +175,7 @@ function longestForLoop() {
 
 
 
-//for loop spits out the actual longest word
+//for loop (spits out the actual longest word)
 function longestForLoopWord() {
     "use strict";
 
@@ -191,16 +191,22 @@ function longestForLoopWord() {
     return largestString;
 }
 
-//Longest ForEachLoop
+//ForEachLoop (spits out length of longest string)
 function longestForEachLoop(){
 	"use strict";
 
 	var args = Array.prototype.slice.apply(arguments, []),
 	largestString = 0;
 
-	args.forEach(function(num){
-		
-	})
+	args.forEach(function(word){
+		if(word.length > largestString){
+
+			largestString = word.length;
+//if i were to say largestString.length = word.length; I get 0 returned.
+//can you not put .length behind a 0 to return 0?
+		}
+	});
+	return largestString;
 }
 
 
@@ -208,12 +214,12 @@ function longestForEachLoop(){
 
 //Problem 5
 
-// function forEach(array, callback){
-//     "use strict";
-//     for(var i = 0; i < array.length; i++){
-//         callback(array[i], i);
-//     }
-// }
+function forEach(array, callback){
+    "use strict";
+    for(var i = 0; i < array.length; i++){
+        callback(array[i], i);
+    }
+}
 
 // //The Date Sorting Function
 // //
