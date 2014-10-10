@@ -291,14 +291,14 @@ console.log(customers);
 
     		.map(function(c)	{
 
-    			return { name: c.firstname + " " + c.lastname};
+    			return { first: c.firstname, last: c.lastname };
     		})
             //new array was created
     		.sort(sortByName)
 
     	function sortByName(c1, c2){
     		"use strict";
-    		return c1.name > c2.name ? 1 : -1
+    		return c1.last > c2.last ? 1 : -1
     	};
            
 console.log(projections); 
