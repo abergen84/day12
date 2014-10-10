@@ -301,4 +301,6 @@ console.log(customers);
     		return c1.lastname > c2.lastname ? 1 : -1
     	};
            
-console.log(projections);
+console.log(projections); 
+
+//test
