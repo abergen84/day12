@@ -298,7 +298,7 @@ console.log(customers);
 
     	function sortByName(c1, c2){
     		"use strict";
-    		return c1.lastname > c2.lastname ? 1 : -1;
+    		return c1.lastname > c2.lastname ? 1 : -1
     	};
            
 console.log(projections);
